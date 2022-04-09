@@ -1,0 +1,17 @@
+name: do504
+region: ams
+services:
+- envs:
+  - key: BACK_SERVICE_URL
+    scope: RUN_AND_BUILD_TIME
+    value: https://my-app-45vno.ondigitalocean.app/back
+  http_port: 3000
+  image:
+    registry_type: DOCR
+    repository: "504"
+    tag: latest
+  instance_count: 1
+  instance_size_slug: basic-xxs
+  name: do504
+  routes:
+  - path: /
