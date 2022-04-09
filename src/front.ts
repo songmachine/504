@@ -6,7 +6,7 @@ export function setupFrontService(app: Koa) {
     app.use(async (ctx, next) => {
         try {
             if (ctx.path.startsWith("/front")) {
-                const reqsArg = ctx.query.reqs || "10";
+                const reqsArg = ctx.query.reqs || config.front.defaultRequests;
                 const reqs = Number(reqsArg);
                 if (isNaN(reqs)) {
                     throw new Error("Invalid argument");
