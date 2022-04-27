@@ -19,7 +19,7 @@ export function setupFrontService(app: Koa) {
                 const responses = await Promise.all(
                     bodies.map((body) =>
                         axios.post(config.backServiceURL, body, {
-                            headers: { "content-type": "application/json" },
+                            headers: { "content-type": "text/plain" },
                             validateStatus: () => true,
                         })
                     )

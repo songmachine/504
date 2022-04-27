@@ -16,7 +16,7 @@ const config: {
     }
 } = {
     port: getEnv("PORT", 3000),
-    backServiceURL: getEnv("BACK_SERVICE_URL", "http://localhost:3000/back"),
+    backServiceURL: getEnv("BACK_SERVICE_URL", "http://127.0.0.1:3000/back"),
     services: {
         front: getEnv("SVC_FRONT", true),
         back: getEnv("SVC_BACK", true),
